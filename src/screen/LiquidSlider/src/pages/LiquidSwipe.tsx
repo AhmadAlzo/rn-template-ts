@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import Slider from "../components/Slider"
+import Slider from "../components/Slider";
 import Slide from "../components/Slide";
 
 const slides = [
-  { 
+  {
     color: "#F2A1AD",
     title: "Dessert Recipes",
     description:

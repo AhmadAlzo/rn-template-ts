@@ -10,8 +10,9 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import Svg, { Path } from "react-native-svg";
+import MaskedView from "@react-native-masked-view/masked-view";
 import { Vector } from "react-native-redash";
-import MaskedView from "@react-native-masked-view/masked-view"; 
+
 interface SlideProps {
   slide: {
     color: string;

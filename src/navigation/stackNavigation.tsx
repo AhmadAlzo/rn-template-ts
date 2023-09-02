@@ -62,16 +62,16 @@ function StackNavigation() {
                                     component={LiquidScreen}
                                     options={{ headerShown: false }}
                                 />
-                                <Stack.Screen
+                                {/* <Stack.Screen
                                     name="SowlutionScreen"
                                     component={SowlutionScreen}
                                     options={{ headerShown: false }}
-                                />
-                                {/* <Stack.Screen
+                                /> */}
+                                <Stack.Screen
                                     name="Main"
                                     component={BottomTabs}
                                     options={{ headerShown: false }}
-                                /> */}
+                                />
 
                             </>
                         ) : (

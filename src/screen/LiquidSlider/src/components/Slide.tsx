@@ -2,6 +2,7 @@ import Color from "color";
 import React from "react";
 import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
 import Svg, { RadialGradient, Defs, Rect, Stop } from "react-native-svg";
+
 const { width, height } = Dimensions.get("screen");
 const SIZE = width - 75;
 const styles = StyleSheet.create({

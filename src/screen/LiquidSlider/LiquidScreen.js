@@ -1,5 +1,5 @@
 import React from 'react';
-import LiquidSwipe from './pages/LiquidSwipe';
+import LiquidSwipe from './src/pages/LiquidSwipe'
 import { useFonts } from 'expo-font';
 import {View} from "react-native"
 const fonts = {
