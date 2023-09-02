@@ -3,9 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { KeyboardAvoidingView, Platform, ActivityIndicator, View } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useState, useEffect } from "react";
-
 import { useAuth } from "../contexts/Auth";
-
 import { StackParamList } from "../types";
 import LoginScreen from "../screen/registers/LoginScreen";
 import RegisterScreen from "../screen/registers/RegisterScreen";
@@ -13,9 +11,9 @@ import WelcomScreen from "../screen/registers/WelcomScreen"
 import BottomTabs from "./BottomTabs";
 import FinelSetting from "../screen/registers/FinelSetting";
 import SowlutionScreen from "../screen/sowlutioinProject/SowlutionScreen";
+import LiquidScreen from "../screen/LiquidSlider/LiquidScreen";
 // import ImagesViewer from "../screen/imageViewer/ImagesViewer";
 const Stack = createNativeStackNavigator<StackParamList>();
-
 function StackNavigation() {
     const [userInfo, setUserInfo] = useAuth();
     const [loading, setLoading] = useState<boolean>(true);
@@ -60,11 +58,15 @@ function StackNavigation() {
                                     // options={{ headerShown: false }}
                                 /> */}
                                 <Stack.Screen
+                                    name="LiquidScreen"
+                                    component={LiquidScreen}
+                                    options={{ headerShown: false }}
+                                />
+                                <Stack.Screen
                                     name="SowlutionScreen"
                                     component={SowlutionScreen}
                                     options={{ headerShown: false }}
                                 />
-
                                 {/* <Stack.Screen
                                     name="Main"
                                     component={BottomTabs}
@@ -95,7 +97,6 @@ function StackNavigation() {
                                     component={FinelSetting}
                                     options={{ headerShown: false }}
                                 />
-
                             </>
                         )
                     }
@@ -104,5 +105,4 @@ function StackNavigation() {
         </NavigationContainer>
     );
 }
-
 export default StackNavigation;

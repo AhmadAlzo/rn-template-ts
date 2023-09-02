@@ -23,6 +23,7 @@ export type StackParamList = ParamListBase & {
   someSetting: {email: string, name: string,password:string};
   SettingFrined: {data: string[], number:number};
   ImageViewerPage:undefined;
+  LiquidScreen:undefined;
 };
 
 export type TabParamList = {

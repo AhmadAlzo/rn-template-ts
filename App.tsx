@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { useState,useCallback,useEffect } from "react"
+import { useState, useCallback, useEffect } from "react"
 import * as SplashScreen from 'expo-splash-screen';
+import {GestureHandlerRootView} from "react-native-gesture-handler";
 
 import StackNavigation from "./src/navigation/stackNavigation";
-
 import { FriendContext } from "./src/contexts/FriendContext";
 import { AuthProvider } from "./src/contexts/Auth"
 import vectorFonts from './src/data/Fonts';
@@ -44,13 +44,15 @@ export default function App() {
     return null;
   }
   return (
-    <SafeAreaProvider  style={{ flex: 1 }} onLayout={onLayoutRootView}>   
-      <AuthProvider>
-        <FriendContext>
-        <StackNavigation/>
-        </FriendContext>
-      </AuthProvider>
-      <StatusBar backgroundColor="#110134" style="light" />
-    </SafeAreaProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider style={{ flex: 1 }} onLayout={onLayoutRootView}>
+        <AuthProvider>
+          <FriendContext>
+            <StackNavigation />
+          </FriendContext>
+        </AuthProvider>
+        <StatusBar backgroundColor="#110134" style="light" />
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
